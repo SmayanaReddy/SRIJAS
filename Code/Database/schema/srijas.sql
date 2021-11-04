@@ -20,21 +20,22 @@ SET time_zone = "+00:00";
 --
 -- Database: `srijas`
 --
-
+CREATE DATABASE IF NOT EXISTS srijas DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE srijas;
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `job_master`
 --
 
-CREATE TABLE `job_master` (
-  `job_id` int(11) NOT NULL,
-  `job_title` varchar(100) NOT NULL,
-  `is_active` bit(1) NOT NULL,
-  `created_by` int(11) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_by` int(11) NOT NULL,
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE job_master (
+  job_id int(11) NOT NULL,
+  job_title varchar(100) NOT NULL,
+  is_active bit(1) NOT NULL,
+  created_by int(11) NOT NULL,
+  created_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_by int(11) NOT NULL,
+  updated_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
