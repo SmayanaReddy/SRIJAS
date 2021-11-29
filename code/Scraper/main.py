@@ -7,7 +7,7 @@ import json
 import linkedin_scraper
 import indeed_scraper
 import monster_scraper
-import scrapper_goingglobal
+import goinglobal_scrapper
 import helper
 import time
 
@@ -82,7 +82,7 @@ def generate_job_map(job_board_role_mp, all_skills):
             elif (jb == 'MONSTER'):
                 j = monster_scraper.get_jobs(rl[0], rl[1], 10, all_skills)
             elif (jb == 'GOINGLOBAL'):
-                j = scrapper_goingglobal.get_jobs(rl[0], rl[1], 10, all_skills)
+                j = goinglobal_scrapper.get_jobs(rl[0], rl[1], 10, all_skills)
             job_map[jb][rl] = j
     return job_map
 
